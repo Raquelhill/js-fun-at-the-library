@@ -1,4 +1,4 @@
-function createLibrary(name, shelves) {
+function createLibrary(name) {
   return {
     name: name,
     shelves: {
