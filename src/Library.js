@@ -1,3 +1,4 @@
+
 function createLibrary(name) {
   return {
     name: name,
@@ -10,13 +11,7 @@ function createLibrary(name) {
 };
 
 function addBook(library, book) {
-  if (book.genre === "fantasy") {
-    return library.shelves.fantasy.push(book)
-  } else if (book.genre === "fiction") {
-    return library.shelves.fiction.push(book)
-  } else {
-    return library.shelves.nonFiction.push(book)
-  }
+  library.shelves[book.genre].push(book)
 };
 
 function checkoutBook(library, title, genre) {
